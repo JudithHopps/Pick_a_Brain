@@ -1,0 +1,107 @@
+:root {
+  /* Gray Scale */
+  --gray-100: #f5f5f5;
+  --gray-200: #e6e6e6;
+  --gray-300: #d9d9d9;
+  --gray-400: #b3b3b3;
+  --gray-500: #757575;
+  --gray-600: #444444;
+  --gray-700: #383838;
+  --gray-800: #2c2c2c;
+  --gray-900: #1e1e1e;
+  --gray-1000: #111111;
+
+  /* Sky Blue Scale */
+  --sky-blue-100: #e0f7fa; /* Lightest Sky Blue */
+  --sky-blue-200: #b2ebf2; /* Light Sky Blue */
+  --sky-blue-300: #80deea; /* Sky Blue */
+  --sky-blue-400: #4dd0e1; /* Medium Sky Blue */
+  --sky-blue-500: #26c6da; /* Default Sky Blue */
+  --sky-blue-600: #00bcd4; /* Darker Sky Blue */
+  --sky-blue-700: #00acc1; /* Dark Sky Blue */
+  --sky-blue-800: #0097a7; /* Deeper Sky Blue */
+  --sky-blue-900: #00838f; /* Very Dark Sky Blue */
+  --sky-blue-1000: #006064; /* Deepest Sky Blue */
+
+  /* Blue Scale */
+  --blue-100: #e0f7ff; /* Lightest Blue */
+  --blue-200: #b2ebff; /* Light Blue */
+  --blue-300: #80deff; /* Sky Blue */
+  --blue-400: #4dd0ff; /* Medium Light Blue */
+  --blue-500: #00a0ff; /* Default Blue */
+  --blue-600: #0091ea; /* Darker Blue */
+  --blue-700: #0081cb; /* Dark Blue */
+  --blue-800: #0072b8; /* Deeper Blue */
+  --blue-900: #0064a1; /* Very Dark Blue */
+  --blue-1000: #005d8a; /* Deepest Blue */
+  /* Text Colors */
+  --text-default: var(--gray-900);
+  --text-secondary: var(--gray-500);
+  --text-tertiary: var(--gray-400);
+
+  /* Background Colors */
+  --bg-default: #ffffff; /* white */
+  --bg-hover-default: var(--gray-100);
+  --bg-hover-secondary: var(--gray-200);
+  --bg-tertiary: var(--gray-300);
+  --bg-hover-tertiary: var(--gray-400);
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Border Colors */
+  --border-default: var(--gray-300);
+  --border-secondary: var(--gray-500);
+  --border-tertiary: var(--gray-700);
+
+  --divWidth: calc(100vw - 100px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.page-container {
+  width: var(--divWidth);
+  margin-left: 100px;
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    width: 100vw;
+    margin: 0;
+  }
+}
